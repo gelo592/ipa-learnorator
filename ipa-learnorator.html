@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="ipa-learnorator.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+  <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <title>IPA Learnorator</title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-2">
+        <h2>IPA Learnorator</h2>
+        <p> listen to the word and type the corresponding IPA </p>
+      </div>
+      <!-- /col-sm-4 -->
+    </div>
+    <!-- /row -->
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-2 sound-wrap">
+        <a class="sound-button-main"><audio class="sound-main"></audio><img class="speaker" src="speaker.png" /></a>
+      </div>
+      <!-- /col-sm-4 -->
+    </div>
+    <!-- /row -->
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-2">
+        <div class="input-group">
+          <input class="form-control ipa-box" placeholder="/blu/" />
+          <span class="input-group-btn">
+              <button class="btn btn-default" type="button">am i right?</button>
+            </span>
+        </div>
+        <!-- /input-group -->
+      </div>
+      <!-- /col-sm-4 -->
+    </div>
+    <!-- /row -->
+    <div class="row keyboard">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="row vowels">
+          <div class="key">
+            <div class="key-touche">
+              <span>1</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Close_front_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="closed front unrounded">i</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>2</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Near-close_near-front_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+
+            <div class="key-letter">
+              <span title="near-close near-front unrounded">ɪ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>3</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Close_back_rounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="close back rounded">u</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>4</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Near-close_near-back_rounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="near-close near-back rounded">ʊ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>5</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Open-mid_front_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="open mid-front unrounded">ɛ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>6</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Regular_and_r-colored_vowels.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="close front">ɚ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>7</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/0/02/Open-mid_back_rounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="open-mid back rounded">ɔ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>8</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Near-open_front_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="near-open unrounded">æ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>9</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/9/92/Open-mid_back_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="open-mid back unrounded">ʌ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>0</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Open_back_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="open back unrounded">ɑ</span>
+            </div>
+          </div>
+          <!-- /key -->
+        </div>
+        <div class="row special-char">
+          <div class="key">
+            <div class="key-touche">
+              <span>ctrl-n</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Velar_nasal.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced velar nasal" class='voiced'>ŋ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>ctrl-s</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Voiceless_palato-alveolar_sibilant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiceless palato-alveolar sibilant" class='voiceless'>ʃ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>ctrl-j</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Voiced_palato-alveolar_sibilant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced palato-alveolar sibilant" class='voiced'>ʒ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>ctrl-t</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Voiceless_dental_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiceless dental fricative" class='voiceless'>θ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>ctrl-d</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Voiced_dental_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced dental fricative" class='voiced'>ð</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>ctrl-h</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Voiceless_palato-alveolar_affricate.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiceless palato-alveolar affricative" class="voiceless">tʃ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>ctrl-g</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Voiced_palato-alveolar_affricate.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced palato-alveolar affricative" class="voiced">dʒ</span>
+            </div>
+          </div>
+          <!-- /key -->
+        </div>
+        <div class="row">
+          <div class="key nopekey">
+            <div class="key-touche">
+              <span>&nbsp;</span>
+            </div>
+            <div class="key-letter">
+              <span class='voiceless'>q</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>w</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Voiced_labio-velar_approximant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced labio-velar approximant" class="voiced">w</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key nopekey">
+            <div class="key-touche">
+              <span>&nbsp;</span>
+            </div>
+            <div class="key-letter">
+              <span class='voiceless'>e</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>r</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Alveolar_approximant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced alveolar approximant" class='voiced'>ɹ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>t</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/0/02/Voiceless_alveolar_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiceless alveolar stop" class='voiceless'>t</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key nopekey">
+            <div class="key-touche">
+              <span>&nbsp;</span>
+            </div>
+            <div class="key-letter">
+              <span class='voiceless'>y</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key nopekey">
+            <div class="key-touche">
+              <span>&nbsp;</span>
+            </div>
+            <div class="key-letter">
+              <span class='voiceless'>u</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key nopekey">
+            <div class="key-touche">
+              <span>&nbsp;</span>
+            </div>
+            <div class="key-letter">
+              <span class='voiceless'>i</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key nopekey">
+            <div class="key-touche">
+              <span>&nbsp;</span>
+            </div>
+            <div class="key-letter">
+              <span class='voiceless'>o</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>p</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Voiceless_bilabial_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiceless bilabial stop" class='voiceless'>p</span>
+            </div>
+          </div>
+          <!-- /key -->
+        </div>
+        <div class="row">
+          <div class="key nopekey">
+            <div class="key-touche">
+              <span>&nbsp;</span>
+            </div>
+            <div class="key-letter">
+              <span class='voiceless'>a</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>s</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Voiceless_alveolar_sibilant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiceless alveolar sibilant" class='voiceless'>s</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>d</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Voiced_alveolar_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced alveolar stop" class='voiced'>d</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>f</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Voiceless_labiodental_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiceless labialdental fricative" class='voiceless'>f</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>g</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/58/Voiced_velar_stop.ogg/Voiced_velar_stop.ogg.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced velar stop" class='voiced'>ɡ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>h</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Voiceless_glottal_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiceless glottal fricative" class='voiceless'>h</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>j</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Palatal_approximant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced palatal approximant" class='voiced'>j</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>k</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Voiceless_velar_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiceless velar stop" class='voiceless'>k</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>l</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Alveolar_lateral_approximant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced alveolar lateral" class='voiced'>l</span>
+            </div>
+          </div>
+          <!-- /key -->
+        </div>
+        <div class="row">
+          <div class="key">
+            <div class="key-touche">
+              <span>z</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Voiced_alveolar_sibilant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced alveolar sibiliant" class='voiced'>z</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key nopekey">
+            <div class="key-touche">
+              <span>&nbsp;</span>
+            </div>
+            <div class="key-letter">
+              <span class='voiceless'>x</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key nopekey">
+            <div class="key-touche">
+              <span>&nbsp;</span>
+            </div>
+            <div class="key-letter">
+              <span class='voiceless'>c</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>v</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Voiced_labiodental_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced labial fricative" class='voiced'>v</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>b</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Voiced_bilabial_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced bilabial stop" class='voiced'>b</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>n</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Alveolar_nasal.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced alveolar nasal" class='voiced'>n</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>m</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Bilabial_nasal.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="voiced bilabial nasal" class='voiced'>m</span>
+            </div>
+          </div>
+          <!-- /key -->
+        </div>
+      </div>
+      <!-- /col-8 -->
+    </div>
+    <!-- /row -->
+  </div>
+
+  <div class="ipa-chart">
+    <div class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </div>
+  <script type="text/javascript" src="ipa-learnorator.js"></script>
+</body>
+
+</html>
