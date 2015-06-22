@@ -11,31 +11,42 @@
 </head>
 
 <body>
+  <!-- Static navbar -->
+  <nav class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">IPA Learnorator</a>
+      </div>
+      <div id="navbar" class="navbar-right">
+        <a data-toggle="modal" data-target="#myModal">IPA chart</a>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
   <div class="content">
     <div class="row">
       <div class="col-sm-4 col-sm-offset-2">
-        <h2>IPA Learnorator</h2>
-        <p> listen to the word and type the corresponding IPA </p>
       </div>
       <!-- /col-sm-4 -->
     </div>
     <!-- /row -->
     <div class="row">
-      <div class="col-sm-4 col-sm-offset-2 sound-wrap">
+      <div class="col-sm-2 col-sm-offset-3 sound-wrap">
         <a class="sound-button-main"><audio class="sound-main"></audio><img class="speaker" src="speaker.png" /></a>
       </div>
       <!-- /col-sm-4 -->
-    </div>
-    <!-- /row -->
-    <div class="row">
-      <div class="col-sm-4 col-sm-offset-2">
+      <div class="col-sm-4">
+        <p> listen to the word and type the corresponding IPA transliteration</p>
+        <p class="invisible-word"></p>
         <div class="input-group">
           <input class="form-control ipa-box" placeholder="/blu/" />
           <span class="input-group-btn">
-              <button class="btn btn-default" type="button">am i right?</button>
-            </span>
+            <button id="amiright" class="btn btn-default" type="button">am i right?</button>
+          </span>
         </div>
         <!-- /input-group -->
+        <div class="success">Weeehooo! You got it!</div>
+        <div class="failure">Booger, that's not quite it.</div>
       </div>
       <!-- /col-sm-4 -->
     </div>
@@ -51,7 +62,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Close_front_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="closed front unrounded">i</span>
+              <span title="closed front unrounded" class="letter">i</span>
             </div>
           </div>
           <!-- /key -->
@@ -64,7 +75,7 @@
             </div>
 
             <div class="key-letter">
-              <span title="near-close near-front unrounded">ɪ</span>
+              <span title="near-close near-front unrounded" class="letter">ɪ</span>
             </div>
           </div>
           <!-- /key -->
@@ -76,7 +87,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Close_back_rounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="close back rounded">u</span>
+              <span title="close back rounded" class="letter">u</span>
             </div>
           </div>
           <!-- /key -->
@@ -88,7 +99,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Near-close_near-back_rounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="near-close near-back rounded">ʊ</span>
+              <span title="near-close near-back rounded" class="letter">ʊ</span>
             </div>
           </div>
           <!-- /key -->
@@ -100,7 +111,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Open-mid_front_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="open mid-front unrounded">ɛ</span>
+              <span title="open mid-front unrounded" class="letter">ɛ</span>
             </div>
           </div>
           <!-- /key -->
@@ -109,10 +120,10 @@
               <span>6</span>
             </div>
             <div class="key-sound">
-              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Regular_and_r-colored_vowels.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Mid-central_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="close front">ɚ</span>
+              <span title="close front" class="letter">ə</span>
             </div>
           </div>
           <!-- /key -->
@@ -124,7 +135,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/0/02/Open-mid_back_rounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="open-mid back rounded">ɔ</span>
+              <span title="open-mid back rounded" class="letter">ɔ</span>
             </div>
           </div>
           <!-- /key -->
@@ -136,7 +147,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Near-open_front_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="near-open unrounded">æ</span>
+              <span title="near-open unrounded" class="letter">æ</span>
             </div>
           </div>
           <!-- /key -->
@@ -148,7 +159,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/9/92/Open-mid_back_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="open-mid back unrounded">ʌ</span>
+              <span title="open-mid back unrounded" class="letter">ʌ</span>
             </div>
           </div>
           <!-- /key -->
@@ -160,11 +171,24 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Open_back_unrounded_vowel.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="open back unrounded">ɑ</span>
+              <span title="open back unrounded" class="letter">ɑ</span>
+            </div>
+          </div>
+          <!-- /key -->
+          <div class="key">
+            <div class="key-touche">
+              <span>ctrl-0</span>
+            </div>
+            <div class="key-sound">
+              <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Regular_and_r-colored_vowels.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
+            </div>
+            <div class="key-letter">
+              <span title="close front" class="letter">ɚ</span>
             </div>
           </div>
           <!-- /key -->
         </div>
+
         <div class="row special-char">
           <div class="key">
             <div class="key-touche">
@@ -174,7 +198,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Velar_nasal.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced velar nasal" class='voiced'>ŋ</span>
+              <span title="voiced velar nasal" class='voiced letter'>ŋ</span>
             </div>
           </div>
           <!-- /key -->
@@ -186,7 +210,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Voiceless_palato-alveolar_sibilant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiceless palato-alveolar sibilant" class='voiceless'>ʃ</span>
+              <span title="voiceless palato-alveolar sibilant" class='voiceless letter'>ʃ</span>
             </div>
           </div>
           <!-- /key -->
@@ -198,7 +222,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Voiced_palato-alveolar_sibilant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced palato-alveolar sibilant" class='voiced'>ʒ</span>
+              <span title="voiced palato-alveolar sibilant" class='voiced letter'>ʒ</span>
             </div>
           </div>
           <!-- /key -->
@@ -210,7 +234,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Voiceless_dental_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiceless dental fricative" class='voiceless'>θ</span>
+              <span title="voiceless dental fricative" class='voiceless letter'>θ</span>
             </div>
           </div>
           <!-- /key -->
@@ -222,7 +246,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Voiced_dental_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced dental fricative" class='voiced'>ð</span>
+              <span title="voiced dental fricative" class='voiced letter'>ð</span>
             </div>
           </div>
           <!-- /key -->
@@ -234,7 +258,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Voiceless_palato-alveolar_affricate.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiceless palato-alveolar affricative" class="voiceless">tʃ</span>
+              <span title="voiceless palato-alveolar affricative" class="voiceless letter">tʃ</span>
             </div>
           </div>
           <!-- /key -->
@@ -246,18 +270,19 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Voiced_palato-alveolar_affricate.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced palato-alveolar affricative" class="voiced">dʒ</span>
+              <span title="voiced palato-alveolar affricative" class="voiced letter">dʒ</span>
             </div>
           </div>
           <!-- /key -->
         </div>
+
         <div class="row">
           <div class="key nopekey">
             <div class="key-touche">
               <span>&nbsp;</span>
             </div>
             <div class="key-letter">
-              <span class='voiceless'>q</span>
+              <span>q</span>
             </div>
           </div>
           <!-- /key -->
@@ -269,7 +294,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Voiced_labio-velar_approximant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced labio-velar approximant" class="voiced">w</span>
+              <span title="voiced labio-velar approximant" class="voiced letter">w</span>
             </div>
           </div>
           <!-- /key -->
@@ -278,7 +303,7 @@
               <span>&nbsp;</span>
             </div>
             <div class="key-letter">
-              <span class='voiceless'>e</span>
+              <span>e</span>
             </div>
           </div>
           <!-- /key -->
@@ -290,7 +315,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Alveolar_approximant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced alveolar approximant" class='voiced'>ɹ</span>
+              <span title="voiced alveolar approximant" class='voiced letter'>ɹ</span>
             </div>
           </div>
           <!-- /key -->
@@ -302,7 +327,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/0/02/Voiceless_alveolar_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiceless alveolar stop" class='voiceless'>t</span>
+              <span title="voiceless alveolar stop" class='voiceless letter'>t</span>
             </div>
           </div>
           <!-- /key -->
@@ -311,7 +336,7 @@
               <span>&nbsp;</span>
             </div>
             <div class="key-letter">
-              <span class='voiceless'>y</span>
+              <span>y</span>
             </div>
           </div>
           <!-- /key -->
@@ -320,7 +345,7 @@
               <span>&nbsp;</span>
             </div>
             <div class="key-letter">
-              <span class='voiceless'>u</span>
+              <span>u</span>
             </div>
           </div>
           <!-- /key -->
@@ -329,7 +354,7 @@
               <span>&nbsp;</span>
             </div>
             <div class="key-letter">
-              <span class='voiceless'>i</span>
+              <span>i</span>
             </div>
           </div>
           <!-- /key -->
@@ -338,7 +363,7 @@
               <span>&nbsp;</span>
             </div>
             <div class="key-letter">
-              <span class='voiceless'>o</span>
+              <span>o</span>
             </div>
           </div>
           <!-- /key -->
@@ -350,7 +375,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Voiceless_bilabial_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiceless bilabial stop" class='voiceless'>p</span>
+              <span title="voiceless bilabial stop" class='voiceless letter'>p</span>
             </div>
           </div>
           <!-- /key -->
@@ -373,7 +398,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Voiceless_alveolar_sibilant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiceless alveolar sibilant" class='voiceless'>s</span>
+              <span title="voiceless alveolar sibilant" class='voiceless letter'>s</span>
             </div>
           </div>
           <!-- /key -->
@@ -385,7 +410,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Voiced_alveolar_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced alveolar stop" class='voiced'>d</span>
+              <span title="voiced alveolar stop" class='voiced letter'>d</span>
             </div>
           </div>
           <!-- /key -->
@@ -397,7 +422,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Voiceless_labiodental_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiceless labialdental fricative" class='voiceless'>f</span>
+              <span title="voiceless labialdental fricative" class='voiceless letter'>f</span>
             </div>
           </div>
           <!-- /key -->
@@ -409,7 +434,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/58/Voiced_velar_stop.ogg/Voiced_velar_stop.ogg.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced velar stop" class='voiced'>ɡ</span>
+              <span title="voiced velar stop" class='voiced letter'>ɡ</span>
             </div>
           </div>
           <!-- /key -->
@@ -421,7 +446,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Voiceless_glottal_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiceless glottal fricative" class='voiceless'>h</span>
+              <span title="voiceless glottal fricative" class='voiceless letter'>h</span>
             </div>
           </div>
           <!-- /key -->
@@ -433,7 +458,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Palatal_approximant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced palatal approximant" class='voiced'>j</span>
+              <span title="voiced palatal approximant" class='voiced letter'>j</span>
             </div>
           </div>
           <!-- /key -->
@@ -445,7 +470,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Voiceless_velar_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiceless velar stop" class='voiceless'>k</span>
+              <span title="voiceless velar stop" class='voiceless letter'>k</span>
             </div>
           </div>
           <!-- /key -->
@@ -457,7 +482,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Alveolar_lateral_approximant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced alveolar lateral" class='voiced'>l</span>
+              <span title="voiced alveolar lateral" class='voiced letter'>l</span>
             </div>
           </div>
           <!-- /key -->
@@ -471,7 +496,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Voiced_alveolar_sibilant.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced alveolar sibiliant" class='voiced'>z</span>
+              <span title="voiced alveolar sibiliant" class='voiced letter'>z</span>
             </div>
           </div>
           <!-- /key -->
@@ -480,7 +505,7 @@
               <span>&nbsp;</span>
             </div>
             <div class="key-letter">
-              <span class='voiceless'>x</span>
+              <span>x</span>
             </div>
           </div>
           <!-- /key -->
@@ -489,7 +514,7 @@
               <span>&nbsp;</span>
             </div>
             <div class="key-letter">
-              <span class='voiceless'>c</span>
+              <span>c</span>
             </div>
           </div>
           <!-- /key -->
@@ -501,7 +526,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Voiced_labiodental_fricative.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced labial fricative" class='voiced'>v</span>
+              <span title="voiced labial fricative" class='voiced letter'>v</span>
             </div>
           </div>
           <!-- /key -->
@@ -513,7 +538,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Voiced_bilabial_plosive.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced bilabial stop" class='voiced'>b</span>
+              <span title="voiced bilabial stop" class='voiced letter'>b</span>
             </div>
           </div>
           <!-- /key -->
@@ -525,7 +550,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Alveolar_nasal.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced alveolar nasal" class='voiced'>n</span>
+              <span title="voiced alveolar nasal" class='voiced letter'>n</span>
             </div>
           </div>
           <!-- /key -->
@@ -537,7 +562,7 @@
               <a class="sound-button"><audio class="sound" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Bilabial_nasal.ogg"></audio><img class="speaker-lil" src="speaker.png" /></a>
             </div>
             <div class="key-letter">
-              <span title="voiced bilabial nasal" class='voiced'>m</span>
+              <span title="voiced bilabial nasal" class='voiced letter'>m</span>
             </div>
           </div>
           <!-- /key -->
@@ -549,24 +574,15 @@
   </div>
 
   <div class="ipa-chart">
-    <div class="modal fade">
+    <div id="myModal" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            <p>One fine body&hellip;</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+          <img class="ipa-chart" src="IPA_chart.jpg" />
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
   </div>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="ipa-learnorator.js"></script>
 </body>
 

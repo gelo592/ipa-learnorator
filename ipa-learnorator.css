@@ -3,7 +3,7 @@
 }
 
 .speaker {
-  width: 160px;
+  width: 140px;
   padding: 20px;
 }
 
@@ -74,4 +74,16 @@ body {
 .special-char {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.ipa-chart {
+  width:800px;
+}
+
+.invisible-word {
+  display: none;
+}
+
+.success, .failure {
+  display: none;
 }

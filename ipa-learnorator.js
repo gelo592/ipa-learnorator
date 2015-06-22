@@ -57,31 +57,178 @@ ipaPracticizer = {
     '7a#68' : '292'
   },
 
-  api_key_shh_dont_show_this_to_anyone: 'a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5',
+  dictionaryKeys: [
+    'blue',
+    'pen',
+    'spin',
+    'tip',
+    'but',
+    'web',
+    'two',
+    'sting',
+    'bet',
+    'do',
+    'odd',
+    'chair',
+    'nature',
+    'teach',
+    'gin',
+    'joy',
+    'edge',
+    'cat',
+    'kill',
+    'skin',
+    'queen',
+    'unique',
+    'go',
+    'get',
+    'beg',
+    'foul',
+    'enough',
+    'leaf',
+    'off',
+    'photo',
+    'voice',
+    'have',
+    'of',
+    'thing',
+    'teeth',
+    'this',
+    'breathe',
+    'father',
+    'see',
+    'city',
+    'pass',
+    'zoo',
+    'rose',
+    'she',
+    'sure',
+    'session',
+    'commotion',
+    'leash',
+    'pleasure',
+    'beige',
+    'equation',
+    'asian',
+    'ham',
+    'hint',
+    'no',
+    'tin',
+    'ringer',
+    'sing',
+    'finger',
+    'drink',
+    'left',
+    'bell',
+    'able',
+    'run',
+    'very',
+    'we',
+    'wake',
+    'yes',
+    'year'
+  ],
+
+  dictionary: {
+    'blue' : 'blu',
+    'pen' : 'pɛn',
+    'spin' : 'spɪn',
+    'tip' : 'tɪp',
+    'but' : 'bʌt',
+    'web' : 'wɛb',
+    'two' : 'tu',
+    'sting' : 'stɪŋ',
+    'bet' : 'bɛt',
+    'do' : 'du',
+    'odd' : 'ɑd',
+    'chair' : 'tʃɛər',
+    'nature' : 'neɪtʃɚ',
+    'teach' : 'titʃ',
+    'gin' : 'dʒɪn',
+    'joy' : 'dʒɔɪ',
+    'edge' : 'ɛdʒ',
+    'cat' : 'kæt',
+    'kill' : 'kɪl',
+    'skin' : 'skɪn',
+    'queen' : 'kwin',
+    'unique' : '',
+    'think' : 'θɪŋk',
+    'go' : 'ɡoʊ',
+    'get' : 'ɡɛt',
+    'beg' : 'bɛɡ',
+    'foul' : 'faʊl',
+    'enough' : 'ɪnʌf',
+    'leaf' : 'lif',
+    'off' : 'ɔf',
+    'photo' : 'foʊɾoʊ',
+    'voice' : 'vɔɪs',
+    'have' : 'hæv',
+    'of' : 'ʌv',
+    'thing' : 'θɪŋ',
+    'teeth' : 'tiθ',
+    'this' : 'ðɪs',
+    'breathe' : 'bɹið',
+    'father' : 'fɑðɚ',
+    'see' : 'si',
+    'city' : 'sɪti',
+    'pass' : 'pæs',
+    'zoo' : 'zu',
+    'rose' : 'ɹoʊz',
+    'she' : 'ʃi',
+    'sure' : 'ʃʊɹ',
+    'session' : 'sɛʃən',
+    'commotion' : 'kəmoʊʃən',
+    'leash' : 'liʃ',
+    'pleasure' : 'plɛʒɚ',
+    'beige' : 'beɪʒ',
+    'equation' : 'ɪkweɪʒən',
+    'asian' : 'eɪʒən',
+    'ham' : 'hæm',
+    'hint' : 'hɪnt',
+    'no' : 'noʊ',
+    'tin' : 'tɪn',
+    'ringer': 'rɪŋɚ',
+    'sing' : 'sɪŋ',
+    'finger' : 'fɪŋɡɚ',
+    'drink' : 'dɹɪŋk',
+    'left' : 'lɛft',
+    'bell' : 'bɛl',
+    'able' : 'eɪbl',
+    'run' : 'ɹʌn',
+    'very' : 'vɛɹɪ',
+    'we' : 'wi',
+    'wake' : 'weɪk',
+    'yes' : 'jɛs',
+    'year' : 'jɪɹ'
+  },
+
+  api_key_shh_dont_show_this_to_anyone: 'this is secret',
 
   api_base_url: 'http://api.wordnik.com/v4/word.json/',
 
+  loadWord: function(word) {
+    var pronunciation = this.getPronunciation(word);
+    this.getAudio(word);
+
+    $(".invisible-word").val(word);
+  },
 
   getPronunciation: function(word) {
-    var url = this.api_base_url + word + '/pronunciations?api_key=' + this.api_key_shh_dont_show_this_to_anyone;
 
-    //var req = http.get(url, this.processPronunciation);
+    return this.dictionary[word];
+    /*var url = this.api_base_url + word + '/pronunciations?api_key=' + this.api_key_shh_dont_show_this_to_anyone;
 
     $.ajax({
       url: this.api_base_url + word + '/pronunciations/?api_key=' + this.api_key_shh_dont_show_this_to_anyone,
       success: this.processPronunciation
-    });
-    //req.end();
+    });*/
   },
 
   processPronunciation: function(resData) {
     if(resData && resData.length > 0 && resData[0].rawType === "ahd-legacy") {
       var ahd = resData[0].raw;
-      console.log(ahd);
       ahd = ahd.slice(1, ahd.length-1);
-      console.log(ahd);
       ahd = ahd.split('');
-      console.log(ahd);
       ipaPracticizer.convertToIPA(ahd);
     }
   },
@@ -109,6 +256,7 @@ ipaPracticizer = {
     }
 
     $(".sound-main").attr("src", audio);
+    $(".sound-main")[0].play();
   },
 
   appendLetter: function(letter) {
@@ -127,11 +275,12 @@ ipaPracticizer = {
       e.preventDefault();
       return;
     }
+
     switch(e.which) {
       case 48:
       case 96: // 0
         e.preventDefault();
-        ipaPracticizer.appendLetter('ɑ');
+        e.ctrlKey ? ipaPracticizer.appendLetter('ɚ') : ipaPracticizer.appendLetter('ɑ');
         break;
       case 49:
       case 97: // 1
@@ -161,7 +310,7 @@ ipaPracticizer = {
       case 54:
       case 102: // 6
         e.preventDefault();
-        ipaPracticizer.appendLetter('ɚ')
+        ipaPracticizer.appendLetter('ə')
         break;
       case 55:
       case 103: // 7
@@ -222,11 +371,9 @@ ipaPracticizer = {
           ipaPracticizer.appendLetter('ŋ');
         }
         break;
-      case 83: // s
-        if(e.ctrlKey) {
-          e.preventDefault();
-          ipaPracticizer.appendLetter('ʃ');
-        }
+      case 82: // r
+        e.preventDefault();
+        ipaPracticizer.appendLetter('ɹ');
         break;
       case 84: // t
         if(e.ctrlKey) {
@@ -235,22 +382,49 @@ ipaPracticizer = {
         }
         break;
     }
+  },
+
+  interceptKeyClicks: function(e) {
+    if($(e.target)[0].className === "speaker-lil") {
+      $(this).find("audio")[0].play();
+    }
+    else {
+      var letter = $(this).find(".letter").text();
+      if(letter && letter != "" && letter != " ") {
+        ipaPracticizer.appendLetter(letter);
+      }
+    }
+  },
+
+  verifySubmission: function() {
+    var input = $(".ipa-box").val();
+    var key = $(".invisible-word").val();
+
+    if(ipaPracticizer.dictionary[key] === input) {
+      var newKeyIndex = ipaPracticizer.dictionaryKeys.indexOf(key) + 1;
+      var newKey = ipaPracticizer.dictionaryKeys[newKeyIndex];
+
+      $(".success").show();
+      setTimeout(function(){ $(".success").hide(); }, 2500);
+
+      ipaPracticizer.loadWord(newKey);
+    }
+    else {
+      console.log('key ', ipaPracticizer.dictionary[key], ' input ', input);
+      $(".failure").show();
+      setTimeout(function(){ $(".failure").hide(); }, 5000);
+    }
   }
 };
 
-ipaPracticizer.getPronunciation('blue');
-
-ipaPracticizer.getAudio('blue');
+ipaPracticizer.loadWord('blue');
 
 $(function() {
   $(".sound-button-main").click(function() {
     $(".sound-main")[0].play();
   });
 
-  $(".sound-button").click(function() {
-    console.log($(this).find("audio"));
-    $(this).find("audio")[0].play();
-  });
-
   $(".ipa-box").keydown(ipaPracticizer.interceptTyping);
+  $(".key").click(ipaPracticizer.interceptKeyClicks);
+  $("#amiright").click(ipaPracticizer.verifySubmission);
 });
