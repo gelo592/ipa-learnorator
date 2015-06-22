@@ -3,8 +3,8 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" href="ipa-learnorator.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="ipa-learnorator.css" />
   <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <title>IPA Learnorator</title>
@@ -15,27 +15,27 @@
   <nav class="navbar navbar-static-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">IPA Learnorator</a>
+        <p class="navbar-brand brand">IPA Learnorator</p>
       </div>
-      <div id="navbar" class="navbar-right">
-        <a data-toggle="modal" data-target="#myModal">IPA chart</a>
-      </div><!--/.nav-collapse -->
-    </div>
+      <ul id="navbar" class="nav navbar-nav navbar-right modal-links">
+        <li>
+          <a data-toggle="modal" data-target="#ipaChartModal">IPA chart</a>
+        </li>
+        <li>
+          <a data-toggle="modal" data-target="#definitions">Definitions</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
   </nav>
 
   <div class="content">
-    <div class="row">
-      <div class="col-sm-4 col-sm-offset-2">
-      </div>
-      <!-- /col-sm-4 -->
-    </div>
     <!-- /row -->
     <div class="row">
-      <div class="col-sm-2 col-sm-offset-3 sound-wrap">
-        <a class="sound-button-main"><audio class="sound-main"></audio><img class="speaker" src="speaker.png" /></a>
+      <div class="col-sm-4 col-sm-offset-4 sound-wrap">
+        <a class="sound-button-main"><audio class="sound-main"></audio><div class="speaker"></div></a>
       </div>
       <!-- /col-sm-4 -->
-      <div class="col-sm-4">
+      <div class="col-sm-4 col-sm-offset-4 input-col">
         <p> listen to the word and type the corresponding IPA transliteration</p>
         <p class="invisible-word"></p>
         <div class="input-group">
@@ -45,8 +45,8 @@
           </span>
         </div>
         <!-- /input-group -->
-        <div class="success">Weeehooo! You got it!</div>
-        <div class="failure">Booger, that's not quite it.</div>
+        <div class="success submit-msg">Weeehooo! You got it!</div>
+        <div class="failure submit-msg">Booger, that's not quite it.</div>
       </div>
       <!-- /col-sm-4 -->
     </div>
@@ -573,15 +573,22 @@
     <!-- /row -->
   </div>
 
-  <div class="ipa-chart">
-    <div id="myModal" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <img class="ipa-chart" src="IPA_chart.jpg" />
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-  </div>
+  <div id="ipaChartModal" class="modal fade">
+    <div class="modal-dialog">
+      <img class="ipa-chart" src="IPA_chart.jpg" />
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div id="definitions" class="modal fade">
+    <div class="modal-dialog">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#">Places of Articulation</a></li>
+      <li role="presentation"><a href="#">Manners of Articulation</a></li>
+      <li role="presentation"><a href="#">Vowels</a></li>
+    </ul>
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="ipa-learnorator.js"></script>
 </body>

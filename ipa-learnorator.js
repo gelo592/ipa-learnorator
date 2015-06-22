@@ -202,7 +202,9 @@ ipaPracticizer = {
     'year' : 'jɪɹ'
   },
 
-  api_key_shh_dont_show_this_to_anyone: 'this is secret',
+  usedWords: [],
+
+  api_key_shh_dont_show_this_to_anyone: 'nothing to see here',
 
   api_base_url: 'http://api.wordnik.com/v4/word.json/',
 
@@ -400,24 +402,40 @@ ipaPracticizer = {
     var input = $(".ipa-box").val();
     var key = $(".invisible-word").val();
 
+    $(".submit-msg").hide();
     if(ipaPracticizer.dictionary[key] === input) {
-      var newKeyIndex = ipaPracticizer.dictionaryKeys.indexOf(key) + 1;
-      var newKey = ipaPracticizer.dictionaryKeys[newKeyIndex];
+      var newWord = ipaPracticizer.getNextWord();
 
       $(".success").show();
       setTimeout(function(){ $(".success").hide(); }, 2500);
 
-      ipaPracticizer.loadWord(newKey);
+      ipaPracticizer.loadWord(newWord);
     }
     else {
       console.log('key ', ipaPracticizer.dictionary[key], ' input ', input);
       $(".failure").show();
       setTimeout(function(){ $(".failure").hide(); }, 5000);
     }
+  },
+
+  getNextWord: function() {
+    if(ipaPracticizer.usedWords.length === ipaPracticizer.dictionaryKeys.length) {
+      ipaPracticizer.usedWords = [];
+    }
+
+    var foundWord = false;
+    while(!foundWord) {
+      var wordIndex = Math.floor(Math.random()*ipaPracticizer.dictionaryKeys.length);
+      if(ipaPracticizer.usedWords.indexOf(wordIndex) < 0) {
+        foundWord = true;
+
+        var word = ipaPracticizer.dictionaryKeys[wordIndex];
+        ipaPracticizer.usedWords.push(wordIndex);
+      }
+    }
+    return word;
   }
 };
-
-ipaPracticizer.loadWord('blue');
 
 $(function() {
   $(".sound-button-main").click(function() {
@@ -427,4 +445,7 @@ $(function() {
   $(".ipa-box").keydown(ipaPracticizer.interceptTyping);
   $(".key").click(ipaPracticizer.interceptKeyClicks);
   $("#amiright").click(ipaPracticizer.verifySubmission);
+
+  var word = ipaPracticizer.getNextWord();
+  ipaPracticizer.loadWord(word);
 });
