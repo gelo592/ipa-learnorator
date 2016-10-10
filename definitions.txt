@@ -1,0 +1,68 @@
+places of articulation
+
+bilabial - consonant articulated with both lips
+
+labiodental - consonant articulated with the lower lip and upper teeth
+
+dental - consonant articulated with the tongue against the upper teeth
+
+alveolar - consonant articulated with the tongue against or close to the alveolar ridge (teeth and hard palate of mouth)
+
+post-alveolar - consonant articulated with the tongue near or touching the back of the alveolar ridge
+
+retroflex - consonant articulated with the tongue flat or curled between the alveolar ridge and the hard palate
+
+palatal - consonant articulated with the body of the tongue raised against the hard palate (roof of mouth)
+
+velar - consonant articulated with the back part of the tongue against the soft palate
+
+uvular - consonant articulated with the tongue against or near the uvula (behind velar consonants)
+
+pharyngeal - consonant articulated primarily in the pharynx
+
+glottal - consonant articulated primarily in the glottis
+
+
+voiced - a sound in which the vocal cords vibrate
+
+voiceless - a sound in which the vocal cords do not vibrate
+
+
+manners of articulation
+
+plosive / stop - consonant in which the vocal tract is blocked so airflow ceases
+
+nasal - consonant produced with a lowered velum allowing air to escape freely through nose
+
+trill - consonant produced by vibrations between the active articulator and passive articulator.
+
+tap / flap - consonant produced with a single contraction of the muscles so that one articulator (such as tongue) is thrown against another
+
+fricative - consonant produced by forcing air through a narrow channel made by placing two articulators close together
+
+affricative consonant that begins as a stop and releases as a fricative
+
+lateral fricative - consonant in which the airstream proceeds along the the sides of the tongue, but is blocked in the middle of the mouth
+
+approximant - consonant in which articulators approach each other, but without enough articulation to create turbulent airflow. They fall between fricatives and vowels.
+
+lateral approximant - consonant in which the center of the tongue makes solid contact witht he roof of mouth. However, the side of the tongue only approches the teeth.
+
+
+----vowels------
+
+backness
+position of the tongue during articulation of a vowel. possible positions:
+front
+near-front
+central
+near-back
+back
+
+height
+vertical position of the tongue relative to roof of mouth or aperature of the jaw
+possible positions:
+close(high) near-close close-mid open-mid near-open open(low)
+
+roundedness
+whether the lips are rounded or not
